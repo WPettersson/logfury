@@ -5,11 +5,10 @@ notifications:
 language: python
 
 python:
-  - 2.6
   - 2.7
-  - 3.3
-  - 3.4
-  - 3.5
+  - 3.6
+  - 3.7
+  - 3.8
   - nightly
   - pypy
   - pypy3
@@ -29,7 +28,7 @@ matrix:
     # Python 2 and once on Python 3.
     - python: 2.7
       env: MODE=SCA
-    - python: 3.5
+    - python: 3.7
       env: MODE=SCA
 
     # Travis CI doesn't support OSX python builds officially,
@@ -38,7 +37,7 @@ matrix:
       os: osx
       language: generic
       env: OS_X_PYTHON_VERSION=python
-    - python: 3.5
+    - python: 3.7
       os: osx
       language: generic
       env: OS_X_PYTHON_VERSION=python3
@@ -56,7 +55,7 @@ matrix:
       env: PYPY_VERSION=pypy3-2.4.0
 
     # coverage
-    - python: 3.5
+    - python: 3.7
       env: MODE=coverage
 
 cache:
